@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './index.scss';
 
 const PRODUCTS=[
     {
@@ -303,21 +304,38 @@ class ProductTable extends React.Component {
   }
 }
 
+
+//Really should just be the product itself
 class ProductRow extends React.Component {
   render() {
     const product = this.props.product;
     const name = product.title;
+    const product_style= {
+	    position: 'relative',
+	    textAlign: 'center',
+	    boxSizing: 'border-box',
+	    padding: '10px',
+	    marginBottom: '30px',
+	    border: '3px solid transparent',
+	    borderColor: 'grey'
+		};
     return (
-      <tr>
-        <td>{name}</td>
-        <td>{product.price}</td>
-        <td><img
-        src={require(`../../static/products/${product.sku}_1.jpg`)}
-      /></td>
-      </tr>
+    	<div style={product_style}>
+        <h4>{name}</h4>
+        <img src={require(`../../static/products/${product.sku}_1.jpg`)} width={110} />
+        <h4> Price: ${product.price} </h4>
+        <button>Add to Cart</button>
+        </div>
+
     );
   }
 }
+
+
+
+
+
+
 
 
 export default App;
