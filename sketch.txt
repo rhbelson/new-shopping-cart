@@ -1,0 +1,14 @@
+FilterableProductTable: highest-order component where you filter by size (i.e, XS vs. S vs. M, etc.)
+
+
+	ProductTable (Contains Rows Of Shirts)
+
+		ProductRow (The Row Itself)
+
+			Shirt: This component is each box containing the picture, price, and add to cart button
+
+				Image
+
+				Price
+
+				AddToCart
