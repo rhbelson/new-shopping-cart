@@ -283,7 +283,7 @@ class ProductTable extends React.Component {
 
     this.props.products.forEach((product) => {
       rows.push(
-        <ProductRow
+        <Product
           product={product}
           key={product.name}
         />
@@ -306,7 +306,7 @@ class ProductTable extends React.Component {
 
 
 //Really should just be the product itself
-class ProductRow extends React.Component {
+class Product extends React.Component {
   render() {
     const product = this.props.product;
     const name = product.title;
@@ -330,10 +330,6 @@ class ProductRow extends React.Component {
     );
   }
 }
-
-
-
-
 
 
 
