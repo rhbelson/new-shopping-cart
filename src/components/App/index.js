@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-// import Shelf from '../Shelf';
-// import FloatCart from '../FloatCart';
-
 const PRODUCTS=[
     {
       "id": 12,
@@ -245,8 +242,8 @@ const PRODUCTS=[
 
 
 class App extends Component {
-
   render() {
+  	 let images = require.context('../../static/products/', true);
     return (
       <div className="App">
         <FilterableProductTable products={PRODUCTS} />
@@ -314,6 +311,9 @@ class ProductRow extends React.Component {
       <tr>
         <td>{name}</td>
         <td>{product.price}</td>
+        <td><img
+        src={require(`../../static/products/${product.sku}_1.jpg`)}
+      /></td>
       </tr>
     );
   }
