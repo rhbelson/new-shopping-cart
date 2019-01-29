@@ -1,3 +1,6 @@
+Iteration #1 Sketch
+
+
 FilterableProductTable: highest-order component where you filter by size (i.e, XS vs. S vs. M, etc.)
 
 
@@ -12,3 +15,14 @@ FilterableProductTable: highest-order component where you filter by size (i.e, X
 				Price
 
 				AddToCart
+
+
+
+Iteration #2 Sketch
+
+
+ProductTable
+	
+	Cart
+
+	Shirt

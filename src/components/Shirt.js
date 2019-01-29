@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-table/react-table.css';
+import { IoIosAddCircle } from "react-icons/io";
 
 //Really should just be the product itself
 class Shirt extends React.Component {
@@ -21,14 +22,15 @@ class Shirt extends React.Component {
         padding: '20px',
         marginBottom: '100px',
         width: '300px',
-        height: '400px'
+        height: '400px',
+        textAlign:'center'
 		};
     return (
     	<div style={product_style}>
-        <h4>{this.props.shirt.title}</h4>
-        <img src={require(`../static/products/${this.props.shirt.sku}_1.jpg`)} width={110} />
-        <h4> Price: ${this.props.shirt.price} </h4>
-        <button outline color="primary">Add to Cart</button>
+        <h5>{this.props.shirt.title}</h5>
+        <img src={require(`../static/products/${this.props.shirt.sku}_1.jpg`)} width={150} />
+        <h5> Price: ${this.props.shirt.price} </h5>
+        <button outline color="primary"><IoIosAddCircle/>Add to Cart</button>
         </div>
 
     );
